@@ -1,0 +1,51 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="faucet" id="faucet">
+        <div class="pipe"></div>
+        <div class="faucet-body">
+            <div class="eye eye1"><div class="pupil"></div></div>
+            <div class="eye eye2"><div class="pupil"></div></div>
+            <div class="mouth"></div>
+        </div>
+        <div class="spout"></div>
+        <div class="handle"></div>
+    </div>
+    <!--waterrrrr-->
+    <div class="water"></div>
+    <p class="hint">tap the faucet to turn on the water</p>
+    <div class="pool"></div>
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+    <div class="bubble b5"></div>
+    <div class="login-register">
+        <h2>Welcome to DROP</h2>
+        <form id="loginForm">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="btn1">login</button>
+            <p>Don't have an account yet? <a href="#" onclick="showForm('register-box')">Register</a></p>
+        </form>
+    </div>
+    <div class="acc-box" id="register-box">
+        <h2>Register</h2>
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit" class="btn1">Register</button>
+        <p>have an account? <a href="#" onclick="showForm('login-box')">Login</a></p>
+        </form>
+    </div>
+</div>
+<script src="script.js"></script>

@@ -1,0 +1,241 @@
+/* page1 */
+body {
+  background-color: #eee4bc;
+  font-family: Arial, sans-serif;
+  color: #0e131f;
+  margin: 0;
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  color: #3b5bdb; /* only useful if the logo uses currentColor */
+}
+
+.brand h1 {
+  font-size: 32px;
+  letter-spacing: 4px;
+  margin: 10px 0 5px 0;
+}
+
+.tagline {
+  color: #40495a;
+  margin: 0;
+}
+
+/* what it does */
+.steps {
+  padding: 0;
+  list-style: none;
+  margin: 0 0 25px 0;
+}
+
+.steps li {
+  margin-top:30px;
+  display: inline-block;
+  align-items: center;
+  background-color: white;
+  border: 2px solid #e8e6df;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-color: #3b5bdb;
+  border-radius: 10px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: #fff;  
+  stroke-width: 2;
+}
+
+.steps strong {
+  display: block;
+}
+
+.steps span {
+  color: #40495a;
+  font-size: 14px;
+}
+
+.promise {
+  text-align: center;
+  color: #3b5bdb;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.promise svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: #3b5bdb;
+  stroke-width: 2;
+  vertical-align: middle;
+}
+
+.actions {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #1b2f80;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  
+}
+
+.link {
+  color: #3b5bdb;
+  text-decoration: none;
+  font-size: 14px;
+}
+/*page2 acc*/
+.faucet{
+  position: absolute;
+  top:0;left:0;
+  width:170px;
+  height: 125px;
+  z-index: 5;
+  cursor: pointer;
+}
+.pipe{
+  position: absolute;
+  top:0;left: 72px;;
+  width: 26px;
+  height: 72px;
+  background-color: #9aa4b2;
+}
+.faucet-body{
+  position: absolute;
+  top:70px;left:18px;
+  width: 100px;
+  height: 40px;
+  background-color: #b4bcc8;
+  border-radius: 12px;
+}
+.eye{position: absolute; top:7px; width: 14px; height: 14px; background-color:white; border-radius: 50%; animation: blink 4s infinite;}
+.eye1{left: 22px;}
+.eye2{left: 52px;}
+.pupil{
+  width: 6px;
+  height: 6px;
+  background-color: #1e2430;
+  border-radius: 50%;
+  margin: 5px 0 0 5px;
+}
+.mouth{
+  position: absolute;
+  top: 26px;left: 40px;
+  width: 16px;
+  height: 6px;
+  border-bottom: 3px solid #690c0c;
+  border-radius: 0 0 16px 16px;
+}
+.spout{
+  position: absolute;
+  top: 106px;left: 22px;
+  width: 24px;height: 16px;
+  background-color: #9aa4b2;
+  border-radius: 0 0 6px 6px;
+}
+.handle{
+  position: relative;
+  top: 36px;left: 106px;
+  width: 10px;height: 34px;
+  background-color: #e8ecf2;
+  border-radius: 5px;
+  transform-origin: bottom center;
+  transition: transform 0.5s;
+  animation:glow 1.6s ease-in-out infinite;
+}
+.handle::before{
+  content: "";
+  position: absolute;
+  top: -13px;left: -8px;
+  width: 26px;height: 26px;
+  border-radius: 50%;
+  background-color: #ff6b6b;
+}
+.water{
+  position: absolute;
+  top: 120px;left: 27px;
+  width: 14px;bottom: 0;
+z-index: 1;
+opacity: 0;
+  transition:opacity 0.4s;
+background-image: repeating-linear-gradient(to bottom,#4bd3ff 0px,#4bd3ff 12px,#2d9cf0 12px,#2d9cf0 24px);
+background-size: 100% 24px;
+animation: flow 0.6 linear infinite;
+}
+.hint{
+  position: absolute;
+  top:45%;left: 0;right: 0;
+  text-align: center;
+  color:rgba(5, 16, 78, 0.8);
+  font-size: 14px;
+  z-index: 3;
+  transition:opacity 0.4s;
+}
+.pool{
+  position: absolute;
+  bottom: 0;left: 0;right: 0;
+  height: 0;
+  background-color: #1f8fe0;
+z-index:2;
+transition: height 10s linear;}
+.pool::before{
+  content: "";
+  position: absolute;
+  top: -12px;left: -50%;
+  width: 200%;height: 24px;
+  background-color: #1f8fe0;
+  border-radius: 50%;
+  animation:wave 3s ease-in-out infinite alternate;
+}
+.bubble{
+  position: absolute;
+  bottom: -20px;
+  width: 10px;height: 10px;
+  background-color: rgba(210, 240, 255, 0.85);
+  border-radius: 50%;
+  opacity: 0;
+  z-index:3;
+}
+.b1{left:10%;animation-delay: 0s;}
+.b2{left:30%;animation-delay: 1.5s;}
+.b3{left:50%;animation-delay: 3s;}
+.b4{left:70%;animation-delay: 2s;}
+.b5{left:90%;animation-delay: 4s;}
+/*login-register*/
+.login-register{
+  margin:0 15px;
+}
+.acc-box{
+  display:none;
+  margin-top: 200px;
+  margin-left: 400px;
+  width:100%;
+}
